@@ -25,5 +25,5 @@ class AutomaticSpeechRecognitionModel:
         )
 
     def recognize_file(self, path: str) -> str:
-        result = self._pipe(path, enerate_kwargs={"language": "mandarin"})
+        result = self._pipe(path, generate_kwargs={"language": "mandarin"})
         return result["text"]
