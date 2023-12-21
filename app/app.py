@@ -1,12 +1,13 @@
 from fastapi import FastAPI, UploadFile
 from .asr import AutomaticSpeechRecognitionModel
+from .config import app_settings
 import tempfile
 
 
 app = FastAPI()
 
 
-model = AutomaticSpeechRecognitionModel('../lingqi/model')
+model = AutomaticSpeechRecognitionModel(app_settings.ai_model_path)
 
 
 @app.post('/recognize/file')
