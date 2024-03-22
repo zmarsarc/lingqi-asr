@@ -1,3 +1,5 @@
 .env/
 *__pycache__*
 *.gz
+.devcontainer/
+dependabot.yml
